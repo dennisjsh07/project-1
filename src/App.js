@@ -1,5 +1,5 @@
 import ExpenseItem from "./components/ExpenseItem";
-
+import Card from "./components/Card";
 function App() {
   const expenses = [
     { id: 1, title: "rent", amount: 17500, date: new Date(2023, 11, 3) },
@@ -8,7 +8,7 @@ function App() {
     { id: 4, title: "water", amount: 500, date: new Date(2023, 11, 3) },
   ];
   return (
-    <div className="App">
+    <Card className="App">
       {expenses.map((i) => (
         <ExpenseItem
           key={i.id} // Make sure to add a unique key when mapping in React
@@ -17,7 +17,7 @@ function App() {
           date={i.date}
         />
       ))}
-    </div>
+    </Card >
   );
 }
 
