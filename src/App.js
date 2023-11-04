@@ -1,5 +1,5 @@
-import ExpenseItem from "./components/ExpenseItem";
-import Card from "./components/Card";
+import Expenses from "./components/Expenses";
+
 function App() {
   const expenses = [
     { id: 1, title: "rent", amount: 17500, date: new Date(2023, 11, 3) },
@@ -8,16 +8,7 @@ function App() {
     { id: 4, title: "water", amount: 500, date: new Date(2023, 11, 3) },
   ];
   return (
-    <Card className="App">
-      {expenses.map((i) => (
-        <ExpenseItem
-          key={i.id} // Make sure to add a unique key when mapping in React
-          title={i.title}
-          amount={i.amount}
-          date={i.date}
-        />
-      ))}
-    </Card >
+    <Expenses items={expenses}/>
   );
 }
 
