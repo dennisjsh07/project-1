@@ -1,3 +1,5 @@
+import React from "react";
+
 import Expenses from "./components/Expenses/Expenses";
 
 function App() {
@@ -8,7 +10,9 @@ function App() {
     { id: 4, title: "water", amount: 500, date: new Date(2023, 11, 3) },
   ];
   return (
-    <Expenses items={expenses}/>
+    <div>
+      <Expenses items={expenses}/>
+    </div>
   );
 }
 
